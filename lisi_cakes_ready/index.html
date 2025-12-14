@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="title">Lisi Cakes – Dulces y Postres</title>
+    <link rel="icon" href="imagenes/Icono-Lisi-Cakes.png">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Lisi Cakes - Postres y pasteles personalizados hechos con amor. Pedidos y contacto.">
+</head>
+<body>
+
+<!-- BOTÓN IDIOMAS -->
+<div class="lang-btn">
+    <button onclick="setLanguage('es')">ES</button>
+    <button onclick="setLanguage('en')">EN</button>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <nav class="nav" aria-label="Menú principal">
+        <a href="#" class="logo" data-lang="brand">Lisi Cakes</a>
+
+        <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false">☰</button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio" data-lang="nav_home">Inicio</a></li>
+            <li><a href="#productos" data-lang="nav_images">Imágenes</a></li>
+            <li><a href="#galeria" data-lang="nav_videos">Videos</a></li>
+            <li><a href="#precios" data-lang="nav_prices">Precios</a></li>
+            <li><a href="#testimonios" data-lang="nav_testimonials">Testimonios</a></li>
+            <li><a href="#contacto" data-lang="nav_contact">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<main>
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h1 data-lang="hero_title">Postres y Pasteles Personalizados</h1>
+        <p data-lang="hero_text">Delicias hechas con amor para tus momentos especiales.</p>
+        <a href="#productos" class="btn" data-lang="hero_btn">Ver Productos</a>
+    </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="productos" aria-label="Nuestros productos">
+    <div class="container">
+        <h2 data-lang="products_title">Nuestros Productos</h2>
+
+        <div class="grid-productos">
+
+            <article class="card">
+                <img src="imagenes/2.png" alt="Pastel personalizado" loading="lazy">
+                <h3 data-lang="prod_cakes_title">Pasteles Personalizados</h3>
+                <p data-lang="prod_cakes_text">Diseños únicos para bodas, cumpleaños y eventos.</p>
+            </article>
+
+            <article class="card">
+                <img src="imagenes/13.png" alt="Cupcakes" loading="lazy">
+                <h3 data-lang="prod_cupcakes_title">Cupcakes</h3>
+                <p data-lang="prod_cupcakes_text">Sabores clásicos y de autor, perfectos para regalar.</p>
+            </article>
+
+            <article class="card">
+                <img src="imagenes/10.png" alt="Postres variados" loading="lazy">
+                <h3 data-lang="prod_desserts_title">Postres Variados</h3>
+                <p data-lang="prod_desserts_text">Tartas, mousses, y postres por porción listos para llevar.</p>
+            </article>
+
+            <div class="boton">
+                <a class="btn2" href="imagenes/imagenes.html" data-lang="prod_gallery_btn">Ver Galería</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="galeria" class="galeria">
+    <div class="container">
+        <h2 data-lang="video_title">Galería de Videos</h2>
+        <p data-lang="video_text" class="muted">Videos cortos que muestran el producto final.</p>
+
+        <div class="videos">
+            <video controls autoplay muted src="videos/Video1.mp4"></video>
+            <video controls autoplay muted src="videos/Video2.mp4"></video>
+            <video controls autoplay muted src="videos/Video3.mp4"></video>
+        </div>
+    </div>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios" class="precios">
+    <div class="container">
+        <h2 data-lang="price_title">Precios de los Productos</h2>
+
+        <div class="price-grid">
+            <div class="price-card">
+                <h3 data-lang="price_normal_title">Pastel normal</h3>
+                <p class="price" data-lang="contact_price">contactar para precios</p>
+
+                <ol>
+                    <li data-lang="normal_1">Diseño estándar</li>
+                    <li data-lang="normal_2">De 8 a 10 porciones</li>
+                    <li data-lang="normal_3">De 10 hasta 20 porciones</li>
+                    <li data-lang="normal_4">Más de 20 porciones dependiendo el diseño</li>
+                </ol>
+            </div>
+
+            <div class="price-card">
+                <h3 data-lang="price_custom_title">Pastel personalizado</h3>
+                <p class="price" data-lang="contact_price">contactar para precios</p>
+
+                <ol>
+                    <li data-lang="custom_1">Aniversario 1 nivel</li>
+                    <li data-lang="custom_2">Aniversario 2 niveles</li>
+                    <li data-lang="custom_3">Aniversario 3 niveles</li>
+                    <li data-lang="custom_4">Bodas</li>
+                    <li data-lang="custom_5">Baby Shower</li>
+                </ol>
+            </div>
+
+            <div class="price-card">
+                <h3 data-lang="price_sweets_title">Cupcakes y dulces</h3>
+                <p class="price" data-lang="contact_price">contactar para precios</p>
+
+                <ol>
+                    <li data-lang="sweet_1">Donas</li>
+                    <li data-lang="sweet_2">Cupcakes</li>
+                    <li data-lang="sweet_3">Panques</li>
+                    <li data-lang="sweet_4">Buffet</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios" class="testimonios">
+    <div class="container">
+        <h2 data-lang="test_title">Testimonios</h2>
+        <blockquote>
+            <p data-lang="test_text">"El pastel fue increíble, todos preguntaron quién lo hizo. Súper recomendable."</p>
+            <cite>— María G.</cite>
+        </blockquote>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="container">
+        <h2 data-lang="contact_title">Contacto</h2>
+        <p data-lang="contact_text">Puedes hacer pedidos o consultar por disponibilidad rellenando el formulario o contactando por WhatsApp.</p>
+
+        <form id="contact-form" class="form" method="post" action="https://formspree.io/f/mjkjnnla">
+
+            <input id="name" name="name" type="text" data-lang-placeholder="ph_name" placeholder="Tu nombre" required>
+
+            <input id="email" name="email" type="email" data-lang-placeholder="ph_email" placeholder="Tu correo" required>
+
+            <textarea id="message" name="message" data-lang-placeholder="ph_message" placeholder="Mensaje y detalles del pedido" rows="5" required></textarea>
+
+            <div class="form-actions">
+                <button type="submit" class="btn" data-lang="btn_send">Enviar</button>
+
+                <a class="btn-outline" href="https://wa.me/+14054396236" target="_blank" rel="noopener" data-lang="btn_whatsapp">
+                    Contactar por WhatsApp
+                </a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+    <footer class="footer">
+    <div class="container">
+
+        <p class="contenido">© 2025 Lisi Cakes. Todos los derechos reservados</p>
+
+        <div class="social-box">
+            <h4>Redes Sociales</h4>
+            <a href="https://www.facebook.com/share/16TKho7wz3/">
+                <img class="facebook" src="imagenes/facebook.png" alt="Icon-Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/lisicakeshomemadeisbetter?igsh=YnVkOGJuNmJ2c3lt">
+                <img class="instagram" src="imagenes/instagram.png" alt="Icon-Instagram">
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+<!-- SCRIPT PARA TRADUCCIÓN -->
+<script>
+const texts = {
+    es: {
+        title:"Lisi Cakes – Dulces y Postres",
+        brand:"Lisi Cakes",
+        nav_home:"Inicio",
+        nav_images:"Imágenes",
+        nav_videos:"Videos",
+        nav_prices:"Precios",
+        nav_testimonials:"Testimonios",
+        nav_contact:"Contacto",
+
+        hero_title:"Postres y Pasteles Personalizados",
+        hero_text:"Delicias hechas con amor para tus momentos especiales.",
+        hero_btn:"Ver Productos",
+
+        products_title:"Nuestros Productos",
+        prod_cakes_title:"Pasteles Personalizados",
+        prod_cakes_text:"Diseños únicos para bodas, cumpleaños y eventos.",
+        prod_cupcakes_title:"Cupcakes",
+        prod_cupcakes_text:"Sabores clásicos y de autor, perfectos para regalar.",
+        prod_desserts_title:"Postres Variados",
+        prod_desserts_text:"Tartas, mousses, y postres por porción listos para llevar.",
+        prod_gallery_btn:"Ver Galería",
+
+        video_title:"Galería de Videos",
+        video_text:"Videos cortos que muestran el producto final. Se iran actualizando periodicamente ",
+
+        price_title:"Precios de los Productos",
+        price_normal_title:"Pastel normal",
+        contact_price:"contactar para precios",
+
+        normal_1:"Diseño estándar",
+        normal_2:"De 8 a 10 porciones",
+        normal_3:"De 10 hasta 20 porciones",
+        normal_4:"Más de 20 porciones dependiendo el diseño",
+
+        price_custom_title:"Pastel personalizado",
+        custom_1:"Aniversario 1 nivel",
+        custom_2:"Aniversario 2 niveles",
+        custom_3:"Aniversario 3 niveles",
+        custom_4:"Bodas",
+        custom_5:"Baby Shower",
+
+        price_sweets_title:"Cupcakes y dulces",
+        sweet_1:"Donas",
+        sweet_2:"Cupcakes",
+        sweet_3:"Panques",
+        sweet_4:"Buffet",
+
+        test_title:"Testimonios",
+        test_text:"\"El pastel fue increíble, todos preguntaron quién lo hizo. Súper recomendable.\"",        
+
+        contact_title:"Contacto",
+        contact_text:"Puedes hacer pedidos o consultar por disponibilidad rellenando el formulario o contactando por WhatsApp.",
+
+        ph_name:"Tu nombre",
+        ph_email:"Tu correo",
+        ph_message:"Mensaje y detalles del pedido",
+
+        btn_send:"Enviar",
+        btn_whatsapp:"Contactar por WhatsApp",
+
+        footer:"© 2025 Lisi Cakes. Todos los derechos reservados",
+        social_title:"Redes Sociales"
+    },
+
+    en: {
+        title:"Lisi Cakes – Cakes & Desserts",
+        brand:"Lisi Cakes",
+        nav_home:"Home",
+        nav_images:"Images",
+        nav_videos:"Videos",
+        nav_prices:"Prices",
+        nav_testimonials:"Testimonials",
+        nav_contact:"Contact",
+
+        hero_title:"Custom Cakes & Desserts",
+        hero_text:"Delicious creations made with love for your special moments.",
+        hero_btn:"View Products",
+
+        products_title:"Our Products",
+        prod_cakes_title:"Custom Cakes",
+        prod_cakes_text:"Unique designs for weddings, birthdays, and events.",
+        prod_cupcakes_title:"Cupcakes",
+        prod_cupcakes_text:"Classic and signature flavors, perfect for gifting.",
+        prod_desserts_title:"Assorted Desserts",
+        prod_desserts_text:"Cakes, mousses, and individual desserts ready to take away.",
+        prod_gallery_btn:"View Gallery",
+
+        video_title:"Video Gallery",
+        video_text:"Short videos showing the final product.",
+
+        price_title:"Product Prices",
+        price_normal_title:"Regular Cake",
+        contact_price:"contact for prices",
+
+        normal_1:"Standard design",
+        normal_2:"8 to 10 servings",
+        normal_3:"10 to 20 servings",
+        normal_4:"More than 20 servings depending on design",
+
+        price_custom_title:"Custom Cake",
+        custom_1:"1 level anniversary cake",
+        custom_2:"2 level anniversary cake",
+        custom_3:"3 level anniversary cake",
+        custom_4:"Wedding cakes",
+        custom_5:"Baby Shower",
+
+        price_sweets_title:"Cupcakes & Sweets",
+        sweet_1:"Donuts",
+        sweet_2:"Cupcakes",
+        sweet_3:"Pound cakes",
+        sweet_4:"Buffet",
+
+        test_title:"Testimonials",
+        test_text:"\"The cake was amazing, everyone asked who made it. Highly recommended.\"",        
+
+        contact_title:"Contact",
+        contact_text:"You can place orders or check availability using the form or contacting us on WhatsApp.",
+
+        ph_name:"Your name",
+        ph_email:"Your email",
+        ph_message:"Message and order details",
+
+        btn_send:"Send",
+        btn_whatsapp:"Contact via WhatsApp",
+
+        footer:"© 2025 Lisi Cakes. All rights reserved",
+        social_title:"Social Networks"
+    }
+};
+
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    // Textos normales
+    document.querySelectorAll("[data-lang]").forEach(el => {
+        const key = el.getAttribute("data-lang");
+        el.textContent = texts[lang][key];
+    });
+
+    // Placeholders
+    document.querySelectorAll("[data-lang-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-lang-placeholder");
+        el.placeholder = texts[lang][key];
+    });
+}
+</script>
+
+</main>
+</body>
+</html>
