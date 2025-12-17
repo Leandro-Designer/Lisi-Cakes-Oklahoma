@@ -177,24 +177,6 @@ body {
 }
 
 /* ================= CONTACTO ================= */
-.form {
-    max-width: 700px;
-    margin: auto;
-    display: grid;
-    gap: 12px;
-}
-
-.form input,
-.form textarea {
-    padding: 12px;
-    border-radius: 10px;
-    border: 2px solid #ffdfea;
-}
-
-.form-actions {
-    display: flex;
-    gap: 12px;
-}
 
 .btn-outline {
     border: 2px solid var(--rosa-fuerte);
