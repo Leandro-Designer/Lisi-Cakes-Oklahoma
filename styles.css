@@ -178,6 +178,10 @@ body {
 
 /* ================= CONTACTO ================= */
 
+.contacto {
+    padding: 40px 0;
+    text-align: center;
+}
 .btn-outline {
     border: 2px solid var(--rosa-fuerte);
     color: var(--rosa-fuerte);
