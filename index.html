@@ -114,10 +114,37 @@
 <section id="testimonios" class="testimonios">
     <div class="container">
         <h2 data-lang="test_title">Testimonios</h2>
-        <blockquote>
-            <p data-lang="test_text">"El pastel fue increíble, todos preguntaron quién lo hizo. Súper recomendable."</p>
-            <cite>— María G.</cite>
-        </blockquote>
+
+        <!-- FORMULARIO FEEDBACK -->
+        <form id="feedbackForm" class="feedback-form">
+            <input type="text" id="fb-name" placeholder="Tu nombre/Name" required>
+
+            <!-- ESTRELLAS -->
+            <div class="stars">
+                <input type="radio" name="rating" id="star5" value="5" required>
+                <label for="star5">★</label>
+
+                <input type="radio" name="rating" id="star4" value="4">
+                <label for="star4">★</label>
+
+                <input type="radio" name="rating" id="star3" value="3">
+                <label for="star3">★</label>
+
+                <input type="radio" name="rating" id="star2" value="2">
+                <label for="star2">★</label>
+
+                <input type="radio" name="rating" id="star1" value="1">
+                <label for="star1">★</label>
+            </div>
+
+            <textarea id="fb-message" placeholder="Escribe tu opinión/Feedback" required></textarea>
+
+            <button type="submit" class="btn">Enviar opinión</button>
+        </form>
+
+        <!-- LISTA DE FEEDBACKS -->
+        <div id="feedbackList" class="feedback-list"></div>
+
     </div>
 </section>
 
@@ -290,6 +317,44 @@ function setLanguage(lang) {
         el.placeholder = texts[lang][key];
     });
 }
+
+const feedbackForm = document.getElementById("feedbackForm");
+const feedbackList = document.getElementById("feedbackList");
+
+feedbackForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("fb-name").value;
+    const message = document.getElementById("fb-message").value;
+    const rating = document.querySelector('input[name="rating"]:checked').value;
+
+    const feedback = { name, message, rating };
+
+    let feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+    feedbacks.push(feedback);
+
+    localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
+
+    feedbackForm.reset();
+    renderFeedbacks();
+});
+
+function renderFeedbacks() {
+    feedbackList.innerHTML = "";
+    const feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+
+    feedbacks.forEach(fb => {
+        feedbackList.innerHTML += `
+            <div class="feedback-item">
+                <strong>${fb.name}</strong>
+                <div class="rating">${"★".repeat(fb.rating)}</div>
+                <p>${fb.message}</p>
+            </div>
+        `;
+    });
+}
+
+renderFeedbacks();
 </script>
 
 </main>
