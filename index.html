@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta http-equiv="content-language" content="es">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="title">Lisi Cakes – Dulces y Postres</title>
+
+    <title>Lisi Cakes | Pasteles Personalizados y Postres en Oklahoma</title>
+
+    <meta name="description"
+    content="Lisi Cakes ofrece pasteles personalizados, cupcakes y postres artesanales en Oklahoma. Pedidos por WhatsApp y redes sociales.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://lisicakes.github.io/Lisi-Cakes-Oklahoma/">
+
     <link rel="icon" href="imagenes/Icono-Lisi-Cakes.png">
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Lisi Cakes - Postres y pasteles personalizados hechos con amor. Pedidos y contacto.">
+
+    <!-- Open Graph (Facebook / WhatsApp) -->
+    <meta property="og:title" content="Lisi Cakes | Pasteles Personalizados en Oklahoma">
+    <meta property="og:description"
+    content="Postres y pasteles artesanales hechos con amor. Cumpleaños, bodas y eventos.">
+    <meta property="og:image"
+    content="https://lisicakes.github.io/Lisi-Cakes-Oklahoma/imagenes/2.png">
+    <meta property="og:url"
+    content="https://lisicakes.github.io/Lisi-Cakes-Oklahoma/">
+    <meta property="og:type" content="website">
 </head>
 <body>
 
 <!-- BOTÓN IDIOMAS -->
-<div class="lang-btn">
+<div class="lang-btn" aria-hidden="true">
     <button onclick="setLanguage('es')">ES</button>
     <button onclick="setLanguage('en')">EN</button>
 </div>
@@ -35,10 +54,20 @@
 <section id="inicio" class="hero">
     <div class="hero-content">
         <h1 data-lang="hero_title">Postres y Pasteles Personalizados</h1>
+        <section class="seo-text">
+    <div class="container">
+    <p>
+        Lisi Cakes es un emprendimiento de pasteles personalizados en Oklahoma,
+        especializado en cumpleaños, bodas, baby showers y eventos especiales.
+        Elaboramos cupcakes y postres artesanales con ingredientes de alta calidad.
+    </p>
+</div>
+</section>
         <p data-lang="hero_text">Delicias hechas con amor para tus momentos especiales.</p>
         <a href="#productos" class="btn" data-lang="hero_btn">Ver Productos</a>
     </div>
 </section>
+
 
 <!-- PRODUCTOS -->
 <section id="productos" class="productos" aria-label="Nuestros productos">
@@ -86,31 +115,61 @@
     </div>
 </section>
 
+<!-- PRECIOS -->
+<section id="precios" class="precios">
+    <div class="container">
+        <h2 data-lang="price_title">Precios de los Productos</h2>
+
+        <div class="price-grid">
+            <div class="price-card">
+                <h3 data-lang="price_normal_title">Pastel normal</h3>
+                <p class="price" data-lang="contact_price">El costo varia segun lo que desee el cliente, por favor contactar para más detalles de  precios</p>
+            </div>
+
+            <div class="price-card">
+                <h3 data-lang="price_custom_title">Pastel personalizado</h3>
+                <p class="price" data-lang="contact_price">El costo varia segun lo que desee el cliente, por favor contactar para más detalles de precios</p>
+            </div>
+
+            <div class="price-card">
+                <h3 data-lang="price_sweets_title">Cupcakes y dulces</h3>
+                <p class="price" data-lang="contact_price">El costo varia segun lo que desee el cliente, por favor contactar para más detalles de  precios</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- CONTACTO -->
 <section id="contacto" class="contacto">
     <div class="container">
         <h2 data-lang="contact_title">Contacto</h2>
-        <p data-lang="contact_text">Puedes hacer pedidos o consultar por disponibilidad poniendose en contactando vía email o WhatsApp.</p>
-        <form id="contact-form" class="form" method="post" action="https://formspree.io/f/mjkjnnla">
+        <p data-lang="contact_text">Puedes hacer pedidos o consultar por disponibilidad rellenando el formulario o contactando por WhatsApp.</p>
 
-            <input id="name" name="name" type="text" data-lang-placeholder="ph_name" placeholder="Tu nombre" required>
+        <form id="contact-form" class="form"
+    action="https://formspree.io/f/TU_ID_AQUI"
+    method="POST">
 
-            <input id="email" name="email" type="email" data-lang-placeholder="ph_email" placeholder="Tu correo" required>
+    <input name="name" type="text" placeholder="Tu nombre" required>
+    <input name="email" type="email" placeholder="Tu correo" required>
 
-            <textarea id="message" name="message" data-lang-placeholder="ph_message" placeholder="Mensaje y detalles del pedido" rows="5" required></textarea>
+    <textarea name="message"
+    placeholder="Mensaje y detalles del pedido"
+    rows="5" required></textarea>
 
-            <div class="form-actions">
-                <button type="submit" class="btn" data-lang="btn_send">Enviar</button>
+    <div class="form-actions">
+    <button type="submit" class="btn">Enviar</button>
 
-                <a class="btn-outline" href="https://wa.me/+14054396236" target="_blank" rel="noopener" data-lang="btn_whatsapp">
-                    Contactar por WhatsApp
-                </a>
-                </div>
-        </form>
+    <a class="btn-outline"
+        href="https://wa.me/+14054396236"
+        target="_blank" rel="noopener">
+        Contactar por WhatsApp
+    </a>
+    </div>
+</form>
     </div>
 </section>
 
-    <!-- TESTIMONIOS -->
+<!-- TESTIMONIOS -->
 <section id="testimonios" class="testimonios">
     <div class="container">
         <h2 data-lang="test_title">Testimonios</h2>
@@ -318,6 +377,7 @@ function setLanguage(lang) {
     });
 }
 
+// SCRIPT PARA FEEDBACKFORM  //
 const feedbackForm = document.getElementById("feedbackForm");
 const feedbackList = document.getElementById("feedbackList");
 
@@ -355,6 +415,7 @@ function renderFeedbacks() {
 }
 
 renderFeedbacks();
+
 </script>
 
 </main>
