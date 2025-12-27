@@ -342,22 +342,37 @@ const texts = {
     }
 };
 
+<script>
+    
 function setLanguage(lang) {
     document.documentElement.lang = lang;
 
-    // Textos normales
+    // Cambiar title correctamente
+    if (texts[lang].title) {
+        document.title = texts[lang].title;
+    }
+
+    // Cambiar textos visibles
     document.querySelectorAll("[data-lang]").forEach(el => {
         const key = el.getAttribute("data-lang");
-        el.textContent = texts[lang][key];
+        if (texts[lang][key]) {
+            el.textContent = texts[lang][key];
+        }
     });
 
     // Placeholders
     document.querySelectorAll("[data-lang-placeholder]").forEach(el => {
         const key = el.getAttribute("data-lang-placeholder");
-        el.placeholder = texts[lang][key];
+        if (texts[lang][key]) {
+            el.placeholder = texts[lang][key];
+        }
     });
 }
 
+// Idioma por defecto
+setLanguage("es");
+
+</script>
 // SCRIPT PARA FEEDBACKFORM  //
 const feedbackForm = document.getElementById("feedbackForm");
 const feedbackList = document.getElementById("feedbackList");
