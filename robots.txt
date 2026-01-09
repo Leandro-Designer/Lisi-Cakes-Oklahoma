@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leandro-designer.github.io/Lisi-Cakes-Oklahoma/sitemap.xml
