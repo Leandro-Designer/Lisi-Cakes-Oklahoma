@@ -43,7 +43,7 @@ body {
     align-items: center;
 }
 
-.name-text {
+.logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--rosa-fuerte);
