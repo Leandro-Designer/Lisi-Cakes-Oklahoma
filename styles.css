@@ -86,6 +86,10 @@ body {
     color: #fff;
 }
 
+.hero-content1 {
+    color: #fff;
+}
+
 .hero-content p {
     color: #fff;
     margin: 15px 0;
@@ -156,6 +160,12 @@ body {
 .videos video {
     width: 100%;
     border-radius: 12px;
+    display: block;
+    /* Force consistent boxes regardless of poster/video intrinsic sizes. */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    background: #000;
 }
 
 
@@ -195,19 +205,6 @@ body {
 }
 
 /*================Feedback=============*/
-.testimonios h2 {
-    text-align: center;
-    position: relative;
-}
-
-.testimonios h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #f9db5c; /* dorado suave */
-    margin: 10px auto 0;
-}
 
 .feedback-form {
     max-width: 500px;
