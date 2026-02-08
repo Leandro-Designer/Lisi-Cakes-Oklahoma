@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Leandro Milan | Whatsapp: https://wa.me/+5551999422335">
+    <meta name="Leandro-Designer" content="Leandro Milan | Whatsapp: https://wa.me/+5551999422335">
 
     <title>Lisi Cakes | Pasteles Personalizados y Postres en Oklahoma</title>
 
@@ -80,18 +80,21 @@
 <section id="inicio" class="hero">
     <div class="hero-content">
         <h1 data-lang="hero_title">Postres y Pasteles artesanales Personalizados en Oklahoma</h1>
-        <section class="seo-text">
+        
     <div class="container">
+        <section class="seo-local">
     <p data-lang="hero_paragraph">
-        Lisi Cakes Oklahoma se especializa en pasteles de cumpleaños, bodas, baby showers y eventos especiales. Todos nuestros dulces son con ingredientes de alta calidad.
+        Lisi Cakes es una pastelería artesanal en Oklahoma especializada en
+        pasteles personalizados, cupcakes y postres para cumpleaños, bodas,
+        baby showers y eventos especiales.
     </p>
-</div>
-</section>
+    </section>
+    </div>
+    
         <p data-lang="hero_text">Delicias hechas con amor para tus momentos especiales.</p>
         <a href="#productos" class="btn" data-lang="hero_btn">Ver Productos</a>
     </div>
-</section>
-
+    </section>
 
 <!-- PRODUCTOS -->
 <section id="productos" class="productos" aria-label="Nuestros productos">
@@ -115,7 +118,7 @@
             <article class="card">
                 <img src="imagenes/30.png" alt="Cupcakes" loading="lazy">
                 <h3 data-lang="prod_cupcakes_title">Cupcakes</h3>
-                <p data-lang="prod_cupcakes_text">Sabores clásicos y de autor, perfectos para regalar.</p>
+                <p data-lang="prod_cupcakes_text">Mini cupcakes ideales para mesas dulces y eventos.</p>
             </article>
 
             <article class="card">
@@ -125,7 +128,7 @@
             </article>
 
             <div class="boton">
-                <a class="btn2" href="imagenes/imagenes.html" data-lang="prod_gallery_btn">Ver Galería</a>
+                <a class="btn2" href="./imagenes/galeria-pasteles.html" data-lang="prod_gallery_btn">Ver Galería</a>
             </div>
         </div>
     </div>
@@ -134,13 +137,22 @@
 <!-- VIDEOS -->
 <section id="galeria" class="galeria">
     <div class="container">
-        <h2 data-lang="video_title">Galería de Videos</h2>
+        <h3 data-lang="video_title">Galería de Videos</h3>
         <p data-lang="video_text" class="muted">Videos cortos que muestran el producto final.</p>
 
         <div class="videos">
-            <video controls autoplay muted src="videos/Video1.mp4"></video>
-            <video controls autoplay muted src="videos/Video2.mp4"></video>
-            <video controls autoplay muted src="videos/Video3.mp4"></video>
+            <video controls preload="metadata" poster="imagenes/Poster-Videos/poster_video1.jpg">
+                <source src="videos/Video1.mp4" type="video/mp4">
+        </video>
+
+            <video controls preload="metadata" poster="imagenes/Poster-Videos/poster_video2.jpg">
+                <source src="videos/Video2.mp4" type="video/mp4">
+        </video>
+
+            <video controls preload="metadata" poster="imagenes/Poster-Videos/poster_video3.jpg">
+                <source src="videos/Video3.mp4" type="video/mp4">
+        </video>
+
         </div>
     </div>
 </section>
@@ -148,7 +160,7 @@
 <!-- CONTACTO -->
 <section id="contacto" class="contacto">
     <div class="container">
-        <h2 data-lang="contact_title">Contacto</h2>
+        <h3 data-lang="contact_title">Contacto</h3>
         <p data-lang="contact_text">Puedes hacer pedidos o consultar por disponibilidad rellenando el formulario o contactando por WhatsApp.</p>
 
         <form id="contact-form" class="form"
@@ -178,7 +190,7 @@
 <!-- TESTIMONIOS -->
 <section id="testimonios" class="testimonios">
     <div>
-        <h2 data-lang="test_title">Testimonios</h2>
+        <h4 data-lang="test_title">Testimonios</h4>
 
         <!-- FORMULARIO FEEDBACK -->
         <form id="feedbackForm" class="feedback-form">
@@ -222,21 +234,21 @@
         <div class="social-box">
             <h4>Redes Sociales</h4>
             <a href="https://www.facebook.com/share/16TKho7wz3/">
-                <img class="facebook" src="imagenes/facebook.png" alt="Icon-Facebook">
+                <img class="facebook" src="imagenes/facebook.png" alt="Lisi Cakes Oklahoma en Facebook">
             </a>
 
             <a href="https://www.instagram.com/lisicakeshomemadeisbetter?igsh=YnVkOGJuNmJ2c3lt">
-                <img class="instagram" src="imagenes/instagram.png" alt="Icon-Instagram">
+                <img class="instagram" src="imagenes/instagram.png" alt="Lisi Cakes Oklahoma en Instagram">
             </a>
         </div>
-          <p>Desarrollado por <a href="https://wa.me/+5551999422335" target="_blank">Leandro Milan</a></p>
+            <p>Desarrollado por <a href="https://wa.me/+5551999422335" target="_blank">Leandro Milan</a></p>
     </div>
 </footer>
 
 <!-- SCRIPT PARA TRADUCCIÓN -->
 <script>
 const texts = {
-  es: {
+    es: {
     hero_paragraph:"Lisi Cakes Oklahoma se especializa en pasteles de cumpleaños, bodas, baby showers y eventos especiales. Todos nuestros dulces son con ingredientes de alta calidad.",
     title:"Lisi Cakes – Dulces y Postres",
     brand:"Lisi Cakes",
@@ -245,7 +257,7 @@ const texts = {
     nav_videos:"Videos",
     nav_contact:"Contacto",
 
-    hero_title:"Postres y Pasteles Personalizados",
+    hero_title:"Postres y Pasteles artesanales Personalizados en Oklahoma",
     hero_paragraph:"Lisi Cakes Oklahoma se especializa en pasteles de cumpleaños, bodas, baby showers y eventos especiales. Todos nuestros dulces son con ingredientes de alta calidad.",
     hero_text:"Delicias hechas con amor para tus momentos especiales.",
     hero_btn:"Ver Productos",
@@ -264,9 +276,9 @@ const texts = {
 
     contact_title:"Contacto",
     contact_text:"Puedes hacer pedidos o consultar por disponibilidad rellenando el formulario o contactando por WhatsApp."
-  },
+    },
 
-  en: {
+    en: {
     hero_paragraph:"Lisi Cakes Oklahoma specializes in cakes for birthdays, weddings, baby showers, and special events. All our cakes are made with high-quality ingredients.",
     title:"Lisi Cakes – Cakes & Desserts",
     brand:"Lisi Cakes",
@@ -275,7 +287,7 @@ const texts = {
     nav_videos:"Videos",
     nav_contact:"Contact",
 
-    hero_title:"Custom Cakes & Desserts",
+    hero_title:"Custom Cakes & Desserts in Oklahoma",
     hero_paragraph:"Lisi Cakes Oklahoma specializes in cakes for birthdays, weddings, baby showers, and special events. All our cakes are made with high-quality ingredients.",
     hero_text:"Delicious creations made with love for your special moments.",
     hero_btn:"View Products",
@@ -294,19 +306,19 @@ const texts = {
 
     contact_title:"Contact",
     contact_text:"You can place orders or check availability using the form or contacting us on WhatsApp."
-  }
+}
 };
 
 function setLanguage(lang) {
-  document.documentElement.lang = lang;
-  document.title = texts[lang].title;
+    document.documentElement.lang = lang;
+    document.title = texts[lang].title;
 
-  document.querySelectorAll("[data-lang]").forEach(el => {
+    document.querySelectorAll("[data-lang]").forEach(el => {
     const key = el.getAttribute("data-lang");
     if (texts[lang][key]) {
-      el.textContent = texts[lang][key];
+        el.textContent = texts[lang][key];
     }
-  });
+    });
 }
 
 // Idioma por defecto
