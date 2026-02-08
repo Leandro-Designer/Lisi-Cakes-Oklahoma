@@ -172,8 +172,32 @@ body {
 /* ================= CONTACTO ================= */
 
 .contacto {
-    padding: 40px 0;
+    padding: 55px 0;
     text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 230, 239, 0.55) 100%);
+    border-top: 1px solid rgba(255, 141, 177, 0.25);
+}
+
+.contacto .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contacto h3 {
+    display: inline-block;
+    background: var(--rosa-fuerte);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 999px;
+    box-shadow: 0 10px 26px rgba(255, 141, 177, 0.25);
+    letter-spacing: 0.2px;
+}
+
+.contacto p {
+    max-width: 760px;
+    margin: 12px auto 0;
+    color: var(--gris);
+    padding: 0 12px;
 }
 
 .form {
@@ -181,6 +205,11 @@ body {
     margin: 16px auto 0;
     display: grid;
     gap: 12px;
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 141, 177, 0.25);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
 }
 
 .form input,
@@ -189,12 +218,28 @@ body {
     border: 2px solid #ffdfea;
     border-radius: 10px;
     font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: rgba(255, 141, 177, 0.9);
+    box-shadow: 0 0 0 4px rgba(255, 141, 177, 0.18);
 }
 
 .form .form-actions {
     display: flex;
     gap: 12px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .btn-outline {
     border: 2px solid var(--rosa-fuerte);
@@ -202,9 +247,40 @@ body {
     padding: 12px 20px;
     border-radius: 20px;
     text-decoration: none;
+    background: rgba(255, 255, 255, 0.7);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    transform: translateY(-1px);
 }
 
 /*================Feedback=============*/
+
+.testimonios {
+    padding: 55px 0;
+    text-align: center;
+    background: var(--crema);
+    border-top: 1px solid rgba(255, 141, 177, 0.25);
+}
+
+.testimonios > div {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonios h4 {
+    display: inline-block;
+    margin-bottom: 12px;
+    background: var(--rosa-fuerte);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 1.35rem;
+    box-shadow: 0 10px 26px rgba(255, 141, 177, 0.25);
+}
 
 .feedback-form {
     max-width: 500px;
@@ -212,13 +288,33 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 141, 177, 0.25);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
 }
 
 .feedback-form input,
 .feedback-form textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ffdfea;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: rgba(255, 141, 177, 0.9);
+    box-shadow: 0 0 0 4px rgba(255, 141, 177, 0.18);
 }
 
 .stars {
@@ -236,23 +332,30 @@ body {
     font-size: 28px;
     color: #ccc;
     cursor: pointer;
+    transition: transform 0.15s ease, color 0.15s ease;
 }
 
 .stars input:checked ~ label,
 .stars label:hover,
 .stars label:hover ~ label {
     color: gold;
+    transform: translateY(-1px);
 }
 
 .feedback-list {
-    margin-top: 30px;
+    margin: 22px auto 0;
+    max-width: 700px;
+    display: grid;
+    gap: 12px;
 }
 
 .feedback-item {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 141, 177, 0.18);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
+    text-align: left;
 }
 
 .feedback-item .rating {
