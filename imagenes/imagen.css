@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* RESET */
 * {
@@ -71,7 +71,7 @@ body {
 }
 
 @keyframes float {
-    0%,100% { transform: translateY(0); }
+    0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
 }
 
@@ -84,18 +84,69 @@ body {
     font-size: 1.6rem;
 }
 
-/* ================= GALERÍA ================= */
-.galeria {
+/* ================= NAVEGACION CATEGORIAS ================= */
+.galeria-nav {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: 10px auto 0;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.galeria-nav a {
+    text-decoration: none;
+    color: #333;
     background: var(--crema);
+    border: 2px solid rgba(255, 141, 177, 0.35);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.galeria-nav a:hover {
+    background: #fff;
+    transform: translateY(-1px);
+}
+
+/* ================= SECCIONES ================= */
+.galeria-page {
+    padding-bottom: 20px;
+}
+
+.galeria-seccion {
+    max-width: 1200px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+.galeria-titulo {
+    display: inline-block;
+    margin: 0 0 12px;
+    background: var(--rosa-fuerte);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 16px;
+    font-size: 1.2rem;
+}
+
+/* ================= GRID GALERIA ================= */
+.galeria-grid {
+    background: var(--crema);
+    border-radius: 18px;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
 
-.galeria img {
+.galeria-grid a {
+    display: block;
+}
+
+.galeria-grid img {
     width: 100%;
     height: 240px;
     object-fit: cover;
@@ -104,7 +155,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.galeria img:hover {
+.galeria-grid img:hover {
     transform: scale(1.05);
 }
 
@@ -115,6 +166,10 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -133,12 +188,12 @@ footer {
         font-size: 1.3rem;
     }
 
-    .galeria {
+    .galeria-grid {
         padding: 15px;
         gap: 15px;
     }
 
-    .galeria img {
+    .galeria-grid img {
         height: 200px;
     }
 }
